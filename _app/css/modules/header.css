@@ -1,0 +1,125 @@
+/* 
+  The styles in this file are based on several resources:
+  1. Flexbox properties and principles learned from MDN Web Docs: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox
+  2. Conversations and guidance from OpenAI's ChatGPT for responsive design and best practices.
+  
+  Flexbox was utilized to the header for easier alignment and distribution of elements.
+*/
+.header {
+	position: relative;
+	background: #fff;
+	padding: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	font-family: var(--font-tertiary);
+    font-size: 1.2rem;
+}
+
+.header__logo {
+	text-align: start;
+}	
+
+.header__logo img {
+	width: 20vw; /* Logo width is responsive to the viewport width */
+	min-width: 100px;
+	max-width: 200px;
+	height: auto;
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px; /* The width and height makes the elements very small so it's not visible on the screen. */
+	height: 1px;
+	padding: 0; /* The padding and margin ensure that the element doesn't take up any additional space. */
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0); /* This property is used for compatibility with older browsers. */
+	border: 0;
+}
+
+.header__nav {
+	background: #fff;
+	padding: 1rem;
+	z-index: 10;
+}
+
+.header__nav--active {
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+}
+
+ul {
+	font-weight: 500;
+}
+
+.header__nav .nav__list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	user-select: none;
+	display: none;
+}
+
+.header__nav .nav__item {
+	text-align: center;
+	padding: var(--gap);
+}
+
+.header__nav .nav__link {
+	text-decoration: none;
+	color: #000;
+	position: relative;
+	transition: color 0.3s ease;
+}
+
+/* Hover Effects */
+.header__nav .nav__link:hover,
+.header__nav .nav__link:focus {
+	color: #007BFF; /* Change to your preferred hover color */
+}
+
+.header__nav .nav__link::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 2px;
+	display: block;
+	margin-top: 5px;
+	right: 0;
+	background: #007BFF; /* Change to your preferred underline color */
+	transition: width 0.3s ease;
+	-webkit-transition: width 0.3s ease;
+}
+
+.header__nav .nav__link:hover::after,
+.header__nav .nav__link:focus::after {
+	width: 100%;
+	left: 0;
+	background: #007BFF; /* Change to your preferred underline color */
+}
+
+/* Focus state for better accessibility */
+.header__nav .nav__link:focus {
+	outline: 2px solid #007BFF; /* Change to your preferred focus outline color */
+	outline-offset: 4px;
+}
+/* Styles for larger screens */
+@media (min-width: 1000px) {
+	.header__nav {
+		position: static; /* It will follow the normal document flow */
+		width: auto;  /* The nav will take up only as much width as needed */
+		margin-right: 1%;
+        display: flex; /* This overrides the display: none; with display: flex; so that the navigation will always be displayed at larger screens. */
+	}
+
+	.header__menu-button {
+		display: none;
+	}
+
+	.header__nav .nav__list {
+		display: flex;
+		gap: var(--gap);
+	}
+}
