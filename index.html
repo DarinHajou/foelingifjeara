@@ -19,30 +19,30 @@
 				</a>
 			</div>
 
-                <button class="header__menu-button" aria-label="open navigation menu">
-                    <i class="fas fa-bars"></i>
-                </button>
+        <button class="header__menu-button" aria-label="open navigation menu">
+            <i class="fas fa-bars"></i>
+        </button>
 				
 				<nav class="header__nav" role="navigation" aria-label="Hovednavigasjon">
 					<ul class="nav__list">
 						<li class="nav__item">
-							<a class="nav__link" href="#explore" aria-label="Naviger til utforskesiden">Utforsk</a>
+							<a class="nav__link" href="#explore" aria-label="Naviger til utforskesiden">Hjem</a>
 						</li>
 						<li class="nav__item">
 							<a class="nav__link" href="#activities" aria-label="Naviger til aktivitetsiden">Aktiviteter</a>
 						</li>
+            <li class="nav__item">
+              <a class="nav__link" href="#cabins" aria-label="Naviger til våre hytter siden">Våre hytter</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#gallery" aria-label="Naviger til bildesiden">Bilder</a>
+            </li>
 						<li class="nav__item">
-							<a class="nav__link" href="./about/index.html" aria-label="Naviger til om oss siden">Om oss</a>
+              <a class="nav__link" href="#testimonials" aria-label="Naviger til tilbakemeldingssiden">Tilbakemeldinger</a>
 						</li>
-						<li class="nav__item">
-							<a class="nav__link" href="#cabins" aria-label="Naviger til våre hytter siden">Våre hytter</a>
-						</li>
-						<li class="nav__item">
-							<a class="nav__link" href="#gallery" aria-label="Naviger til bildesiden">Bilder</a>
-						</li>
-						<li class="nav__item">
-							<a class="nav__link" href="#testimonials" aria-label="Naviger til tilbakemeldingssiden">Tilbakemeldinger</a>
-						</li>
+            <li class="nav__item">
+              <a class="nav__link" href="./about/index.html" aria-label="Naviger til om oss siden">Om oss</a>
+            </li>
 						<li class="nav__item">
 							<a class="nav__link" href="#contact" aria-label="Naviger til kontakt oss siden">Kontakt oss</a>
 						</li>
@@ -50,9 +50,50 @@
 							<a class="nav__link" href="#support" aria-label="Naviger til støtt oss siden">Støtt oss</a>
 						</li>
 					</ul>
-				</nav>
-					
+				</nav>		
 		</header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero__background">
+            <img src="./_app/assets/photos/hytta.jpg" alt="Hero Image">
+            <div class="hero__overlay"></div>
+        </div>
+        <div class="hero__content">
+            <h1 class="hero__title">Opplev Oslofjorden med <span class="highlight">Føling I Fjæra</span></h1>
+            <p class="hero__subtitle">Et fristed for familier og barn som ønsker å utforske naturen og sjølivet.</p>
+            <div class="hero__buttons">
+                <a href="#about" class="hero__button">Les mer</a>
+                <a href="#support" class="hero__button hero__button--primary">Støtt oss</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+      <div class="about__container">
+          <h2 class="about__title">Om Oss</h2>
+          <p class="about__description">
+              Føling I Fjæra er en organisasjon dedikert til å berike livene til familier og barn ved å tilby tilgang til den vakre Oslofjorden. Vår misjon er å gi et fristed for alle som ønsker å oppleve naturen og sjølivet, spesielt for de som ikke har muligheten til å eie en hytte eller dra på utenlandsferie.
+          </p>
+          <div class="about__images">
+              <img src="./_app/assets/photos/Om-oss-hytte.jpeg" alt="Bilde av hytta" class="about__image">
+              <img src="./_app/assets/photos/om-oss-barn-leker.jpg" alt="Bilde av aktiviteter" class="about__image">
+              <img src="./_app/assets/photos/om-oss-fiske.jpg" alt="Familier som nyter oppholdet" class="about__image">
+          </div>
+          <div class="about__testimonials">
+              <h3 class="about__testimonials-title">Tilbakemeldinger</h3>
+              <blockquote class="testimonial">
+                  "Fantastiske dager fylt med glede og samhold. Barna våre elsket å utforske sjøen og lære om fisking." - Familie A
+              </blockquote>
+              <blockquote class="testimonial">
+                  "En utrolig opplevelse for hele familien. Vi er så takknemlige for denne muligheten." - Familie B
+              </blockquote>
+          </div>
+      </div>
+  </section>
+    </main>
 
 		<footer class="footer">
 			<div class="footer__links">
