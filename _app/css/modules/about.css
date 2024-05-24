@@ -17,10 +17,8 @@ body {
     padding: 2rem; /* Add padding inside the container */
 }
 
-/* Heading Styles */
-h1, h2, h3 {
-    margin-bottom: 1rem; /* Add space below headings */
-    color: #007BFF; /* Use a color that stands out for headings */
+h1 {
+    color: #278941;
 }
 
 /* Paragraph Styles */
@@ -50,6 +48,10 @@ li {
     margin-bottom: 0.5rem; /* Add space between list items */
 }
 
+.strong {
+    color: #278941;
+}
+
 /* Responsive Design */
 @media (max-width: 600px) {
     body {
@@ -60,3 +62,4 @@ li {
         padding: 1rem; /* Reduce padding inside the container */
     }
 }
+
